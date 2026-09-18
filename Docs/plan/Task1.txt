@@ -1,0 +1,11 @@
+we have been tasked another thing :
+
+focus on PaddleOCR model
+we shall not focus on pre-processing or logic improving
+we need to know and document how we are gonna FINE-TUNE this PaddleOCR model for bangladeshi NID. document the proper steps
+should avoid neglible and unnecesary upgrading ideas and focus on model fine-tuning
+the bangla language parsing is not fully implemented. that is to say the bengali text of a bangladesi NID such as fathers name, mothers name, address, etc. we need to increase the bangla text detection/recognition accuracy if it is very low. for that we need to think og unifiedly of bangla+english language. we cannot focus on multiple models, such as let's take that another "X" model fpr bengali langiage ocr and train that - we will not do that. we will do it unifiedly in this paddleOCR model by giving more data.
+with that being said, we will not just focus on this bangla accuracy increasing thing. we fine tune also for the NID format famliarization, multiple lines - field extraction problem of NID, and character/alphabet/glyph spacing problem, etc..
+so, we need to know how much more data(NID) is enough to increase bengali detection/recognition accuracy. and also for the overall accuracy
+we will fine tune both the detection and recognition
+the deliverables are : 1)all steps documented , 2)a proper script that we will run on 2 to 4 NIDs with the intention of fine-tuning the model(we know 2 to 4 NIDs are not meaningfull in case of fine-tuning but it's about learning the process and checking whether our fine-tuning script doing what it supposed to do) , 3)How much more data we need to properly fine-tune , 4)a repo
