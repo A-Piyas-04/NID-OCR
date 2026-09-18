@@ -120,7 +120,7 @@ Typical Kaggle paths:
 5. **Find the real config files** for those exact models in that pinned version.
 6. **Test the training commands** — confirm exact train / evaluate / export entrypoints in Kaggle. Do not copy an old local command blindly.
 7. **Confirm custom Bangla + English characters** — check how this recognizer accepts a custom character dictionary while starting from pretrained weights, and that Bangla Unicode reads correctly in Kaggle.
-8. **Save findings** into `docs/VERSION_NOTES.md` (and keep the notebook in the repo).
+8. **Save findings** into `Docs/VERSION_NOTES.md` (and keep the notebook in the repo).
 
 | | |
 | --- | --- |
@@ -128,6 +128,9 @@ Typical Kaggle paths:
 | **DONE WHEN** | We can explain exactly what Kaggle command will be run and why. |
 
 **Deliverable status:** D1 starts. D4 starts.
+
+**Verified Kaggle pins (Phase 01, 2026-09-18):** PaddleOCR **3.3.0** / PaddlePaddle **3.3.0** / PaddleX **3.3.3**.  
+Do **not** copy PaddlePaddle **3.2.0** from the older NID service report — that pin does not match this Kaggle Python/CUDA environment. Details: `Docs/VERSION_NOTES.md`, `requirements.txt`, `notebooks/01-phase01-environment.ipynb`.
 
 Phase 01 does **not** mean annotate NIDs, build the final dictionary, or claim accuracy improvement.
 

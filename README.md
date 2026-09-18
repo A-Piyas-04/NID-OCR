@@ -18,9 +18,19 @@ Not in scope: preprocessing redesign, parser/regex logic, or a separate Bengali 
 ## Deliverables
 
 1. Documented fine-tuning steps
-2. Working scripts/notebooks tested on 2–4 NIDs (process validation)
+2. Working scripts/notebooks tested on 2-4 NIDs (process validation)
 3. Estimate of how much real NID data is needed
 4. Reproducible repository
+
+## Verified Kaggle stack (Phase 01)
+
+| Package | Version |
+| --- | --- |
+| PaddleOCR | 3.3.0 |
+| PaddlePaddle | **3.3.0** |
+| PaddleX | 3.3.3 |
+
+> The older NID service report used PaddlePaddle **3.2.0**. This fine-tuning repo uses **3.3.0** on Kaggle (Python 3.12 / modern CUDA driver). See `Docs/VERSION_NOTES.md` and `requirements.txt`.
 
 ## Folder structure
 
@@ -33,7 +43,7 @@ NID-OCR/
 |-- Docs/
 |   |-- SCOPE.md                       # project scope
 |   |-- Task1.txt                      # original task brief
-|   |-- VERSION_NOTES.md               # verified Kaggle / PaddleOCR versions
+|   |-- VERSION_NOTES.md               # verified Kaggle pins (PaddlePaddle 3.3.0)
 |   |-- PaddleOCR_NID_Phase_Plan.md    # phase-by-phase plan
 |   +-- report/                        # technical reports (Markdown)
 |
@@ -70,15 +80,15 @@ NID-OCR/
 
 ## Docs
 
-- [`Docs/SCOPE.md`](Docs/SCOPE.md) — in/out of scope
-- [`Docs/PaddleOCR_NID_Phase_Plan.md`](Docs/PaddleOCR_NID_Phase_Plan.md) — full phase plan
-- [`Docs/VERSION_NOTES.md`](Docs/VERSION_NOTES.md) — environment notes (fill in Phase 01)
-- [`Docs/Task1.txt`](Docs/Task1.txt) — original task statement
-- [`Docs/report/`](Docs/report/) — OCR model report and fine-tuning overview
+- [`Docs/SCOPE.md`](Docs/SCOPE.md) - in/out of scope
+- [`Docs/plan/PaddleOCR_NID_Phase_Plan.md`](Docs/plan/PaddleOCR_NID_Phase_Plan.md) - full phase plan
+- [`Docs/VERSION_NOTES.md`](Docs/VERSION_NOTES.md) - verified Kaggle versions (PaddlePaddle **3.3.0**, not the report 3.2.0)
+- [`Docs/plan/Task1.txt`](Docs/plan/Task1.txt) - original task statement
+- [`Docs/report/`](Docs/report/) - OCR model report and fine-tuning overview
 
 ## Quick start (Kaggle)
 
 1. Clone / upload this repo content into a Kaggle Notebook (or sync notebooks from `notebooks/`).
 2. Attach the **private** NID Kaggle Dataset.
-3. Follow phases in [`Docs/PaddleOCR_NID_Phase_Plan.md`](Docs/PaddleOCR_NID_Phase_Plan.md), starting at Phase 01.
+3. Follow phases in [`Docs/plan/PaddleOCR_NID_Phase_Plan.md`](Docs/plan/PaddleOCR_NID_Phase_Plan.md), starting at Phase 01 (`notebooks/01-phase01-environment.ipynb`).
 4. Keep real NID images out of Git.

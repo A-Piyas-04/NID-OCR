@@ -1,11 +1,24 @@
 # Dependencies
 
-Exact package versions will be pinned after Phase 01 verifies what installs cleanly on Kaggle.
+Pinned after Phase 01 on Kaggle (see Docs/VERSION_NOTES.md).
 
-Expected stack:
+## Verified stack (authoritative for this repo)
 
-- PaddlePaddle
-- PaddleOCR
-- PaddleX (if required by the chosen PP-OCRv5 training path)
+paddleocr==3.3.0
+paddlex==3.3.3
+paddlepaddle==3.3.0
 
-Install and pin versions inside the Kaggle Notebook, then copy the verified pins here.
+### PaddlePaddle install note
+
+On Kaggle (Python 3.12, driver CUDA 13.x), prefer the GPU wheel from the official index, then fall back:
+
+# Prefer (GPU)
+# pip install paddlepaddle-gpu==3.3.0 -i https://www.paddlepaddle.org.cn/packages/stable/cu130/
+# Fallback
+# pip install paddlepaddle-gpu==3.3.0 -i https://www.paddlepaddle.org.cn/packages/stable/cu126/
+# CPU (Phase 01 verification / if GPU wheel fails)
+# pip install paddlepaddle==3.3.0 -i https://www.paddlepaddle.org.cn/packages/stable/cpu/
+
+Do NOT assume PaddlePaddle 3.2.0 from the older NID service report — that pin does not match this Kaggle environment. This project uses 3.3.0.
+
+Install and pin inside the Kaggle Notebook (notebooks/01-phase01-environment.ipynb), then keep this file in sync with Docs/VERSION_NOTES.md.

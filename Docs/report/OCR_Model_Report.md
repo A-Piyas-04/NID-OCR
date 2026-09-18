@@ -311,7 +311,9 @@ train/img_00003.jpg\t2716031329835
 ## 7.4  Stage 3 — Run the fine-tune
 PaddleOCR 3.x routes training through PaddleX. The shape of the workflow is: take the config for the module you are training, point it at your dataset, and start from the pretrained weights rather than from scratch.
 # 1. Verify the training entrypoint and config path for your installed version
-pip show paddlex        # 3.3.3 in this project
+# Fine-tuning repo (Kaggle) pins: paddleocr 3.3.0 / paddlepaddle 3.3.0 / paddlex 3.3.3
+# (This service review used paddlepaddle 3.2.0 — do not copy that pin to Kaggle.)
+pip show paddlex        # 3.3.3 in this project / fine-tuning repo
 python -c "import paddlex, os; print(os.path.dirname(paddlex.__file__))"
 
 # 2. Validate the dataset against the module's expected format
